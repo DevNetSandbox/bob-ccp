@@ -111,7 +111,7 @@ def new_cluster(session, ccp, provider_uuid, network_uuid, cluster_name):
         }
     }
     s = session
-    r = s.post(url, json=data, verify=False, timeout=240)
+    r = s.post(url, json=data, verify=False, timeout=600)
     response = json.loads(r.text)
     print(response)
 
